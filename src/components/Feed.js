@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Posts from "./Posts";
 import useFeedState from "../utils/useFeedState";
 const Feed = () => {
@@ -12,6 +12,10 @@ const Feed = () => {
     createPost,
     posts,
   } = useFeedState();
+
+  useEffect(() => {
+    displayUserInput && userInputRef?.current?.focus();
+  }, [displayUserInput]);
 
   return (
     <div>
@@ -33,7 +37,7 @@ const Feed = () => {
           <div ref={addPostRef} className="flex flex-col">
             <textarea
               ref={userInputRef}
-              className="shadow rounded px-4 py-2 mb-1 border border-gray-100 text-sm text-slate-700 outline-none"
+              className="shadow rounded px-4 py-2 mb-1 border border-[#FF748D] text-sm text-slate-700 outline-none"
               row={4}
               onFocus={() => setShowError(false)}
             />
