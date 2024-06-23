@@ -62,6 +62,7 @@ const Header = ({ loggedInUser, setIsUserAuthenticated }) => {
                           : `/${eachItem?.display}`
                       );
                       setDisplay(eachItem?.display);
+                      setMobileResponsive(false);
                     }}
                   >
                     {eachItem?.innerText}
