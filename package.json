@@ -13,7 +13,6 @@
   },
   "name": "micro-twitter",
   "version": "1.0.0",
-  "main": "index.js",
   "devDependencies": {
     "buffer": "^6.0.3",
     "parcel": "^2.12.0",
